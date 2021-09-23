@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 public class LastLetterWord {
 
     /*
@@ -11,8 +13,16 @@ public class LastLetterWord {
 
     public static void main(String[] args) {
 
+        String word1 = JOptionPane.showInputDialog("enter word 1: ");
+        String word2 = JOptionPane.showInputDialog("enter word 2: " );
+        String word3 = JOptionPane.showInputDialog("enter word 3: ");
 
+        JOptionPane.showMessageDialog(null, lastThree(word1) + lastThree(word2)+ lastThree(word3));
 
+        System.exit(0);
+    }
+    public static String lastThree(String word){
+        return word.substring(word.length()-3);
     }
 
 }
